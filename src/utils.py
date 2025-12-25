@@ -112,13 +112,7 @@ class extend_class(object):  # nocov
                     if id(result["value"]) == id(attributeValue):
                         crossDelete[attributeName] = attributeValue
                     else:
-
-                        # if not override this attribute
-                        if not override.isOverride(attributeValue):
-                            print(
-                                f"[{attributeName}] {id(result['value'])} - {id(attributeValue)}"
-                            )
-                            raise BaseException("err")
+                        pass
 
             [newAttributes.pop(cross) for cross in crossDelete]
 
